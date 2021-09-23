@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_widget/safe_area.dart';
+import 'package:weekly_widget/safe_area/safe_area.dart';
 
 void main() => runApp(MyApp());
 
