@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 
+import 'expanded/expanded.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,6 +31,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => SafeAreaPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Expanded'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExpandedPage(),
                     fullscreenDialog: true,
                   ));
             },
