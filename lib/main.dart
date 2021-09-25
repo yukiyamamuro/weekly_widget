@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weekly_widget/animated_container/animated_container.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
@@ -56,6 +57,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => WrapPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Animated Container'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AnimatedContainerPage(),
                     fullscreenDialog: true,
                   ));
             },
