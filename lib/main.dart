@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
+import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'expanded/expanded.dart';
 
@@ -43,6 +44,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ExpandedPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Wrap'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WrapPage(),
                     fullscreenDialog: true,
                   ));
             },
