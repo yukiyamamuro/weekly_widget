@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weekly_widget/animated_container/animated_container.dart';
 import 'package:weekly_widget/fade_transition/fade_transition.dart';
 import 'package:weekly_widget/feature_builder/feature_builder.dart';
+import 'package:weekly_widget/floating_action_button/floating_action_button.dart';
 import 'package:weekly_widget/opacity/opacity.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
@@ -108,6 +109,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => FadeTransitionPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Floating Action button'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FloatingActionButtonPage(),
                     fullscreenDialog: true,
                   ));
             },
