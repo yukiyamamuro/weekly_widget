@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_widget/animated_container/animated_container.dart';
+import 'package:weekly_widget/feature_builder/feature_builder.dart';
 import 'package:weekly_widget/opacity/opacity.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
@@ -82,6 +83,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => OpacityPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Feature Builder'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FeatureBuilderPage(),
                     fullscreenDialog: true,
                   ));
             },
