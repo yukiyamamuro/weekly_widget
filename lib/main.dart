@@ -6,6 +6,7 @@ import 'package:weekly_widget/floating_action_button/floating_action_button.dart
 import 'package:weekly_widget/opacity/opacity.dart';
 import 'package:weekly_widget/page_view/page_view.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
+import 'package:weekly_widget/table/table.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'expanded/expanded.dart';
@@ -134,6 +135,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => PageViewPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Table'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TablePage(),
                     fullscreenDialog: true,
                   ));
             },
