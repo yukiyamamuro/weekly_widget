@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_widget/animated_container/animated_container.dart';
+import 'package:weekly_widget/fade_in_image/fade_in_image.dart';
 import 'package:weekly_widget/fade_transition/fade_transition.dart';
 import 'package:weekly_widget/feature_builder/feature_builder.dart';
 import 'package:weekly_widget/floating_action_button/floating_action_button.dart';
@@ -173,6 +174,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => SliverPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Fade In Image'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FadeInImagePage(),
                     fullscreenDialog: true,
                   ));
             },
