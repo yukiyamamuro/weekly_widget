@@ -9,6 +9,7 @@ import 'package:weekly_widget/page_view/page_view.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/silver_app_bar/silver_app_bar.dart';
 import 'package:weekly_widget/sliver_grid_and_list/sliver.dart';
+import 'package:weekly_widget/stream_builder/stream_builder.dart';
 import 'package:weekly_widget/table/table.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
@@ -186,6 +187,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => FadeInImagePage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Stream Builder'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => StreamBuilderPage(),
                     fullscreenDialog: true,
                   ));
             },
