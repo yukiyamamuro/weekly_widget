@@ -4,6 +4,7 @@ import 'package:weekly_widget/fade_in_image/fade_in_image.dart';
 import 'package:weekly_widget/fade_transition/fade_transition.dart';
 import 'package:weekly_widget/feature_builder/feature_builder.dart';
 import 'package:weekly_widget/floating_action_button/floating_action_button.dart';
+import 'package:weekly_widget/inherited_widget/inherited_widget2.dart';
 import 'package:weekly_widget/opacity/opacity.dart';
 import 'package:weekly_widget/page_view/page_view.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
@@ -199,6 +200,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => StreamBuilderPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Inherited Widget'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => InheritedWidgetPage2(),
                     fullscreenDialog: true,
                   ));
             },
