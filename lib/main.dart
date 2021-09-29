@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_widget/animated_container/animated_container.dart';
+import 'package:weekly_widget/clip_r_rect/clip_r_rect.dart';
 import 'package:weekly_widget/fade_in_image/fade_in_image.dart';
 import 'package:weekly_widget/fade_transition/fade_transition.dart';
 import 'package:weekly_widget/feature_builder/feature_builder.dart';
@@ -212,6 +213,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => InheritedWidgetPage2(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('ClipRRect'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ClipRRectPage(),
                     fullscreenDialog: true,
                   ));
             },
