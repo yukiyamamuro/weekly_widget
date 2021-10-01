@@ -15,6 +15,7 @@ import 'package:weekly_widget/silver_app_bar/silver_app_bar.dart';
 import 'package:weekly_widget/sliver_grid_and_list/sliver.dart';
 import 'package:weekly_widget/stream_builder/stream_builder.dart';
 import 'package:weekly_widget/table/table.dart';
+import 'package:weekly_widget/tooltip/tooltip.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'expanded/expanded.dart';
@@ -251,6 +252,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => CustomPaintPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Tooltip'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TooltipPage(),
                     fullscreenDialog: true,
                   ));
             },
