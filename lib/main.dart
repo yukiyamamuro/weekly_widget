@@ -20,6 +20,7 @@ import 'package:weekly_widget/tooltip/tooltip.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'expanded/expanded.dart';
+import 'layout_builder/layout_builder.dart';
 
 void main() => runApp(MyApp());
 
@@ -276,6 +277,17 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => FittedBoxPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          ListTile(
+            title: const Text('LayoutBuilder'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LayoutBuilderPage(),
                     fullscreenDialog: true,
                   ));
             },
