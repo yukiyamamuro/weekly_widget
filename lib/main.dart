@@ -5,6 +5,7 @@ import 'package:weekly_widget/custom_paint/custom_paint.dart';
 import 'package:weekly_widget/fade_in_image/fade_in_image.dart';
 import 'package:weekly_widget/fade_transition/fade_transition.dart';
 import 'package:weekly_widget/feature_builder/feature_builder.dart';
+import 'package:weekly_widget/fitted_box/fitted_box.dart';
 import 'package:weekly_widget/floating_action_button/floating_action_button.dart';
 import 'package:weekly_widget/hero/hero.dart';
 import 'package:weekly_widget/inherited_widget/inherited_widget2.dart';
@@ -264,6 +265,17 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => TooltipPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          ListTile(
+            title: const Text('FittedBox'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FittedBoxPage(),
                     fullscreenDialog: true,
                   ));
             },
