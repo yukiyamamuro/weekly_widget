@@ -21,6 +21,7 @@ import 'package:weekly_widget/tooltip/tooltip.dart';
 import 'package:weekly_widget/transform/transform.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
+import 'backdrop_filter/backdrop_filter.dart';
 import 'expanded/expanded.dart';
 import 'layout_builder/layout_builder.dart';
 
@@ -313,6 +314,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => TransformPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('BackdropFilter'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BackdropFilterPage(),
                     fullscreenDialog: true,
                   ));
             },
