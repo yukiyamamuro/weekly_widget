@@ -15,6 +15,7 @@ import 'package:weekly_widget/page_view/page_view.dart';
 import 'package:weekly_widget/positioned/positioned.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/silver_app_bar/silver_app_bar.dart';
+import 'package:weekly_widget/sized_box/sized_box.dart';
 import 'package:weekly_widget/sliver_grid_and_list/sliver.dart';
 import 'package:weekly_widget/stream_builder/stream_builder.dart';
 import 'package:weekly_widget/table/table.dart';
@@ -378,6 +379,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => DismissiblePage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Sizedbox'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SizedBoxPage(),
                     fullscreenDialog: true,
                   ));
             },
