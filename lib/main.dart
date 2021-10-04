@@ -28,6 +28,7 @@ import 'align/align.dart';
 import 'animated_builder/animated_builder.dart';
 import 'backdrop_filter/backdrop_filter.dart';
 import 'dismissible/dismissible.dart';
+import 'draggable/draggable.dart';
 import 'expanded/expanded.dart';
 import 'layout_builder/layout_builder.dart';
 
@@ -404,6 +405,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ValueListenableBuilderPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Draggable'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DraggablePage(),
                     fullscreenDialog: true,
                   ));
             },
