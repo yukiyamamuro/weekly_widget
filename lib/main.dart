@@ -23,6 +23,7 @@ import 'package:weekly_widget/transform/transform.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'align/align.dart';
+import 'animated_builder/animated_builder.dart';
 import 'backdrop_filter/backdrop_filter.dart';
 import 'expanded/expanded.dart';
 import 'layout_builder/layout_builder.dart';
@@ -352,6 +353,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => PositionedPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('AnimatedBuilder'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AnimatedBuilderPage(),
                     fullscreenDialog: true,
                   ));
             },
