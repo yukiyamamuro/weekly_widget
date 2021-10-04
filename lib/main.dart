@@ -21,6 +21,7 @@ import 'package:weekly_widget/stream_builder/stream_builder.dart';
 import 'package:weekly_widget/table/table.dart';
 import 'package:weekly_widget/tooltip/tooltip.dart';
 import 'package:weekly_widget/transform/transform.dart';
+import 'package:weekly_widget/value_listenable_builder/value_listenable_builder.dart';
 import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'align/align.dart';
@@ -391,6 +392,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => SizedBoxPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('ValueListenableBuilder'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ValueListenableBuilderPage(),
                     fullscreenDialog: true,
                   ));
             },
