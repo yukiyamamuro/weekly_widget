@@ -31,6 +31,7 @@ import 'backdrop_filter/backdrop_filter.dart';
 import 'dismissible/dismissible.dart';
 import 'draggable/draggable.dart';
 import 'expanded/expanded.dart';
+import 'flexible/flexible.dart';
 import 'layout_builder/layout_builder.dart';
 
 void main() => runApp(MyApp());
@@ -430,6 +431,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => AnimatedListPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Flexible'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FlexiblePage(),
                     fullscreenDialog: true,
                   ));
             },
