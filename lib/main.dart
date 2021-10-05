@@ -26,6 +26,7 @@ import 'package:weekly_widget/wrap/wrap.dart';
 
 import 'align/align.dart';
 import 'animated_builder/animated_builder.dart';
+import 'animated_list/animated_list.dart';
 import 'backdrop_filter/backdrop_filter.dart';
 import 'dismissible/dismissible.dart';
 import 'draggable/draggable.dart';
@@ -417,6 +418,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => DraggablePage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Animated List'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AnimatedListPage(),
                     fullscreenDialog: true,
                   ));
             },
