@@ -36,6 +36,7 @@ import 'draggable/draggable.dart';
 import 'expanded/expanded.dart';
 import 'flexible/flexible.dart';
 import 'layout_builder/layout_builder.dart';
+import 'limited_box/limited_box.dart';
 
 void main() => runApp(MyApp());
 
@@ -482,6 +483,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => AspectRatioPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Limited Box'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LimitedBoxPage(),
                     fullscreenDialog: true,
                   ));
             },
