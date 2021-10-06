@@ -29,6 +29,7 @@ import 'align/align.dart';
 import 'animated_builder/animated_builder.dart';
 import 'animated_icon/animated_icon.dart';
 import 'animated_list/animated_list.dart';
+import 'aspect_ratio/aspect_ratio.dart';
 import 'backdrop_filter/backdrop_filter.dart';
 import 'dismissible/dismissible.dart';
 import 'draggable/draggable.dart';
@@ -469,6 +470,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => AnimatedIconPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Aspect Ratio'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AspectRatioPage(),
                     fullscreenDialog: true,
                   ));
             },
