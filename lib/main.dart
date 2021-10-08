@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weekly_widget/absorb_pointer/absorb_pointer.dart';
 import 'package:weekly_widget/animated_container/animated_container.dart';
+import 'package:weekly_widget/animated_swicher/animated_swicher.dart';
 import 'package:weekly_widget/clip_r_rect/clip_r_rect.dart';
 import 'package:weekly_widget/custom_paint/custom_paint.dart';
 import 'package:weekly_widget/fade_in_image/fade_in_image.dart';
@@ -534,6 +535,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ReorderableListViewPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('AnimatedSwitcher'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AnimatedSwicherPage(),
                     fullscreenDialog: true,
                   ));
             },
