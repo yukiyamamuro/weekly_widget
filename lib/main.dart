@@ -14,6 +14,7 @@ import 'package:weekly_widget/opacity/opacity.dart';
 import 'package:weekly_widget/page_view/page_view.dart';
 import 'package:weekly_widget/placeholder/placeholder.dart';
 import 'package:weekly_widget/positioned/positioned.dart';
+import 'package:weekly_widget/reorderable_list_view/reorderable_list_view.dart';
 import 'package:weekly_widget/rich_text/rich_text.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/silver_app_bar/silver_app_bar.dart';
@@ -521,6 +522,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => RichTextPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('ReorderableListView'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ReorderableListViewPage(),
                     fullscreenDialog: true,
                   ));
             },
