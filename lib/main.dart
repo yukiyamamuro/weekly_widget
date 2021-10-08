@@ -12,6 +12,7 @@ import 'package:weekly_widget/hero/hero.dart';
 import 'package:weekly_widget/inherited_widget/inherited_widget2.dart';
 import 'package:weekly_widget/opacity/opacity.dart';
 import 'package:weekly_widget/page_view/page_view.dart';
+import 'package:weekly_widget/placeholder/placeholder.dart';
 import 'package:weekly_widget/positioned/positioned.dart';
 import 'package:weekly_widget/safe_area/safe_area.dart';
 import 'package:weekly_widget/silver_app_bar/silver_app_bar.dart';
@@ -495,6 +496,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => LimitedBoxPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('Placeholder'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PlaceholderPage(),
                     fullscreenDialog: true,
                   ));
             },
