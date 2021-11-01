@@ -33,6 +33,7 @@ import 'align/align.dart';
 import 'animated_builder/animated_builder.dart';
 import 'animated_icon/animated_icon.dart';
 import 'animated_list/animated_list.dart';
+import 'animated_padding/animated_padding.dart';
 import 'animated_positioned/animated_positioned.dart';
 import 'aspect_ratio/aspect_ratio.dart';
 import 'backdrop_filter/backdrop_filter.dart';
@@ -560,6 +561,18 @@ class TopPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => AnimatedPositionedPage(),
+                    fullscreenDialog: true,
+                  ));
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: const Text('AnimatedPadding'),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AnimatedPaddingPage(),
                     fullscreenDialog: true,
                   ));
             },
